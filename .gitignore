@@ -1,12 +1,13 @@
-public/bundle.js
 node_modules/
-.eslintcache
-coverage
-.nyc_output
+*bundle.js
+*bundle*
 .DS_Store
+<<<<<<< HEAD
 *.map
 *.bundle.js
 _site/
 .sass-cache/
 *.iml
 .idea/
+=======
+>>>>>>> v2-7

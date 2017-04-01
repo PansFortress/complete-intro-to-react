@@ -3,35 +3,51 @@ const path = require('path')
 module.exports = {
   context: __dirname,
   entry: './js/ClientApp.js',
+<<<<<<< HEAD
   devtool: 'cheap-module-source-map',
+=======
+  devtool: 'eval',
+>>>>>>> v2-7
   output: {
     path: path.join(__dirname, '/public'),
-    publicPath: '/public/',
     filename: 'bundle.js'
-  },
-  resolve: {
-    // alias: {
-    //   react: 'preact-compat',
-    //   'react-dom': 'preact-compat'
-    // },
-    extensions: ['.js', '.jsx', '.json']
-  },
-  stats: {
-    colors: true,
-    reasons: true,
-    chunks: false
   },
   devServer: {
     publicPath: '/public/',
     historyApiFallback: true
   },
+  resolve: {
+<<<<<<< HEAD
+    // alias: {
+    //   react: 'preact-compat',
+    //   'react-dom': 'preact-compat'
+    // },
+    extensions: ['.js', '.jsx', '.json']
+=======
+    extensions: ['.js', '.json']
+>>>>>>> v2-7
+  },
+  stats: {
+    colors: true,
+    reasons: true,
+    chunks: true
+  },
   module: {
     rules: [
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        include: path.resolve(__dirname, 'js'),
+        test: /\.js$/,
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
@@ -44,6 +60,7 @@ module.exports = {
             }
           }
         ]
+<<<<<<< HEAD
       },
       {
         test: /\.js?$/,
@@ -56,6 +73,8 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader'
+=======
+>>>>>>> v2-7
       }
     ]
   }

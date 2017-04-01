@@ -6,21 +6,23 @@
   "author": "Brian Holt <btholt@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test jest",
-    "update-test": "npm run test -- -u",
+    "lint": "eslint js/**/*.js webpack.config.js",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "lint": "eslint js/**/*.js server.js",
-    "watch": "webpack --watch"
+    "watch": "npm run build -- --watch",
+    "test": "NODE_ENV=test yarn jest"
   },
   "dependencies": {
-    "axios": "0.15.2",
+    "axios": "^0.15.3",
     "express": "4.14.0",
     "history": "^4.4.0",
     "lodash": "4.16.2",
     "preact": "^6.4.0",
     "preact-compat": "^3.9.3",
+<<<<<<< HEAD
     "preact-render-to-string": "^3.3.0",
+=======
+>>>>>>> v2-7
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-redux": "4.4.0",
@@ -49,7 +51,7 @@
     "eslint-plugin-promise": "2.0.1",
     "eslint-plugin-react": "6.3.0",
     "eslint-plugin-standard": "2.0.0",
-    "jest": "15.1.1",
+    "jest": "^15.1.1",
     "jsdom": "9.5.0",
     "json-loader": "0.5.4",
     "react-addons-test-utils": "15.3.2",
