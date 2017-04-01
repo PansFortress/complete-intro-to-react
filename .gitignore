@@ -2,12 +2,10 @@ node_modules/
 *bundle.js
 *bundle*
 .DS_Store
-<<<<<<< HEAD
+bin
 *.map
 *.bundle.js
 _site/
 .sass-cache/
 *.iml
 .idea/
-=======
->>>>>>> v2-7
