@@ -2,7 +2,7 @@ node_modules/
 *bundle.js
 *bundle*
 .DS_Store
-bin
+~/
 *.map
 *.bundle.js
 _site/
